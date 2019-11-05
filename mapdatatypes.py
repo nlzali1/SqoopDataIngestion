@@ -304,7 +304,7 @@ def createHiveTableQuery(conf, tableName):
             sys.exit()
 
     tableName = tableName.split('.')
-    cmd = tablecreation[0] + ' ' + conf["targetDBName"] + '.' + tableName[1] + '(' + ','.join(getColValTypes) + ')' + \
+    cmd = tablecreation[0] + ' ' + conf["targetDBName"] + '.' + tableName[1] + '(' + ','.join(getColValTypes) + ', `last_changed` timestamp NULL DEFAULT CURRENT_TIMESTAMP)' + \
           tablecreation[1]
 
     cur.close()

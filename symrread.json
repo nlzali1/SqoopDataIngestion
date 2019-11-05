@@ -1,0 +1,46 @@
+{
+    "version": "0.0.0",
+    "Configs": {
+        "dbServerAddress": "jdbc:oracle:thin:@sl42.atradiusnet.com",
+        "dbServerAdd": "sl42.atradiusnet.com",
+        "dbServerPort": "1562",
+        "dbName": "SYMR.atradiusnet.com",
+        "dbUser": "SYMRREAD",
+        "dbPassword": "READ_0NLYQ",
+        "dbPasswordAlias": "oracle.orabup0.alias",
+        "dbSecurityProviderPath": "jceks://hdfs/orabup0.password.jceks",
+        "targetDirectory": "/DATA/NATIVE_ZONE/SYMRREAD/SYMRREAD",
+        "subDBName": "SYMRREAD",
+	    "targetDBName": "SYMRREAD",
+        "avscDir": "/user/hdfs/avscSchemaFiles/",
+        "hdfsAddress": "hdfs://lthdp001.atradiusnet.com:8020/",
+        "outdir": "SqoopFiles"
+    },
+
+    "Tables": [	
+        "TBPP_CAILLO_CMPCT",
+        "TBPP_FR1EXC",
+        "TBPP_FR2",
+        "TBPP_FR2EXC",
+        "TBPP_FR3",
+        "TBPP_MAN_JUDGEMENT",
+        "TBPP_MAN_JUDGEMENT_R",
+        "TBPP_MVA_POLICY",
+        "TBPP_MVA_POLICY_R",
+        "TBPP_MVA_REPORT_UNIT_MAPPING",
+        "TBPP_STEP_1",
+        "TBPP_STEP_1C_G_TEMP",
+        "TBPP_STEP_1E_G_TEMP",
+        "TBPP_STEP_2",
+        "TBPP_STEP_3D",
+        "TBPP_STEP_4",
+        "TBPP_STEP_5",
+        "TBPP_TWO_PARAM",
+        "TBUP_STEP_1",
+        "TBUP_STEP_2",
+        "TBUP_STEP_3",
+        "TBUP_STEP_4",
+        "TBUP_STEP_CABRILLO"
+    ]
+}
+
