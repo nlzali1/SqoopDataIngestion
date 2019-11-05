@@ -200,10 +200,14 @@ def createHiveTableQuery(conf, tableName):
         columnName = '\`{0}\`'.format(str(i[0]))
         columnType = str(i[1])
         if 'NUMBER' in columnType:
-            columnType = "INT"
+            columnType = "BIGINT"
             getColValTypes.append(columnName + ' ' + columnType)
             getColNames.append(columnName)
         elif 'STRING' in columnType:
+            columnType = "STRING"
+            getColValTypes.append(columnName + ' ' + columnType)
+            getColNames.append(columnName)
+        elif 'ROWID' in columnType:
             columnType = "STRING"
             getColValTypes.append(columnName + ' ' + columnType)
             getColNames.append(columnName)
@@ -227,29 +231,77 @@ def createHiveTableQuery(conf, tableName):
             columnType = "STRING"
             getColValTypes.append(columnName + ' ' + columnType)
             getColNames.append(columnName)
+        elif 'NVARCHAR' in columnType:
+            columnType = "STRING"
+            getColValTypes.append(columnName + ' ' + columnType)
+            getColNames.append(columnName)
+        elif 'VARCHAR2' in columnType:
+            columnType = "STRING"
+            getColValTypes.append(columnName + ' ' + columnType)
+            getColNames.append(columnName)
+        elif 'NVARCHAR2' in columnType:
+            columnType = "STRING"
+            getColValTypes.append(columnName + ' ' + columnType)
+            getColNames.append(columnName)
         elif 'CHAR' in columnType:
             columnType = "STRING"
             getColValTypes.append(columnName + ' ' + columnType)
             getColNames.append(columnName)
-        elif 'DATE' in columnType:
+        elif 'NCHAR' in columnType:
             columnType = "STRING"
+            getColValTypes.append(columnName + ' ' + columnType)
+            getColNames.append(columnName)
+        elif 'DATE' in columnType:
+            columnType = "DATE"
             getColValTypes.append(columnName + ' ' + columnType)
             getColNames.append(columnName)
         elif 'RAW' in columnType:
-            columnType = "STRING"
+            columnType = "BINARY"
+            getColValTypes.append(columnName + ' ' + columnType)
+            getColNames.append(columnName)
+        elif 'LONG RAW' in columnType:
+            columnType = "BINARY"
             getColValTypes.append(columnName + ' ' + columnType)
             getColNames.append(columnName)
         elif 'FLOAT' in columnType:
-            columnType = "DECIMAL"
+            columnType = "FLOAT"
             getColValTypes.append(columnName + ' ' + columnType)
             getColNames.append(columnName)
-        elif 'LONG' in columnType:
+        elif 'DOUBLE' in columnType:
             columnType = "DOUBLE"
             getColValTypes.append(columnName + ' ' + columnType)
             getColNames.append(columnName)
-        else:
-            getColValTypes.append(columnName + ' ' + "STRING")
+        elif 'BINARY_FLOAT' in columnType:
+            columnType = "FLOAT"
+            getColValTypes.append(columnName + ' ' + columnType)
             getColNames.append(columnName)
+        elif 'BINARY_DOUBLE' in columnType:
+            columnType = "DOUBLE"
+            getColValTypes.append(columnName + ' ' + columnType)
+            getColNames.append(columnName)
+        elif 'LONG' in columnType:
+            columnType = "BINARY"
+            getColValTypes.append(columnName + ' ' + columnType)
+            getColNames.append(columnName)
+        elif 'CLOB' in columnType:
+            columnType = "BINARY"
+            getColValTypes.append(columnName + ' ' + columnType)
+            getColNames.append(columnName)
+        elif 'NCLOB' in columnType:
+            columnType = "BINARY"
+            getColValTypes.append(columnName + ' ' + columnType)
+            getColNames.append(columnName)
+        elif 'BLOB' in columnType:
+            columnType = "BINARY"
+            getColValTypes.append(columnName + ' ' + columnType)
+            getColNames.append(columnName)
+        elif 'TIMESTAMP' in columnType:
+            columnType = "TIMESTAMP"
+            getColValTypes.append(columnName + ' ' + columnType)
+            getColNames.append(columnName)
+        else:
+            print("Error Data Type {0} Not Found in Mappings".format(columnType))
+            sys.exit()
 
     tableName = tableName.split('.')
     cmd = tablecreation[0] + ' ' + conf["targetDBName"] + '.' + tableName[1] + '(' + ','.join(getColValTypes) + ')' + \
