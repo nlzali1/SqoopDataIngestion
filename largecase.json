@@ -1,0 +1,48 @@
+{
+    "version": "0.0.0",
+    "Configs": {
+        "dbServerAddress": "jdbc:jtds:sqlserver://",
+        "dbServerAdd": "GPLCTDB",
+        "dbServerPort": "64295",
+        "dbName": "TEST-LargeCaseTool",
+        "dbUser": "ReadOnlyIFRSDataLake",
+        "dbPassword": "sSqY6x45R5K",
+        "dbPasswordAlias": "oracle.orabup0.alias",
+        "dbSecurityProviderPath": "jceks://hdfs/orabup0.password.jceks",
+        "targetDirectory": "/DATA/NATIVE_ZONE/LARGECASETOOL",
+        "subDBName": "ORABUP0",
+	"targetDBName": "LargeCaseTool",
+        "avscDir": "/user/hdfs/avscSchemaFiles/",
+        "hdfsAddress": "hdfs://lthdp001.atradiusnet.com:8020/",
+        "outdir": "SqoopFiles"
+    },
+
+    "Tables": [	 
+	"Bugsimprovements",
+	"LargeCaseAmounts",
+	"LargeCaseAmountsChangeLog",
+	"LargeCaseDetails",
+	"LargeCaseDetailsChangeLog",
+	"ListBusinessUnit",
+	"ListCauseOfLoss",
+	"ListClaimStatus",
+	"ListClaimType",
+	"ListCountries",
+	"ListCurrency",
+	"ListCurrentUsers",
+	"ListLargeCaseThreshold",
+	"ListLCLAdjustments",
+	"ListLCLColumnNames",
+	"ListLockedRecords",
+	"ListModelType",
+	"ListOrganizationUnit",
+	"ListOriginalCarrier",
+	"ListReportedBy",
+	"ListSeverity",
+	"ListSql",
+	"ListSystem",
+	"ListUsers",
+	"LoginRegistry" 
+    ]
+}
+

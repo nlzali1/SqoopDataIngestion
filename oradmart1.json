@@ -1,0 +1,38 @@
+{
+    "version": "0.0.0",
+    "Configs": {
+        "dbServerAddress": "jdbc:oracle:thin:@sl07.atradiusnet.com",
+        "dbServerAdd": "sl07.atradiusnet.com",
+        "dbServerPort": "1507",
+        "dbName": "MIXM.atradiusnet.com",
+        "dbUser": "IFRS17_USER",
+        "dbPassword": "IFRS17_MI",
+        "dbPasswordAlias": "oracle.orabup0.alias",
+        "dbSecurityProviderPath": "jceks://hdfs/orabup0.password.jceks",
+        "targetDirectory": "/DATA/TRANSIT_ZONE/ORADMART1",
+        "subDBName": "ORADMART1",
+	"targetDBName": "ORADMART1",
+        "avscDir": "/user/hdfs/avscSchemaFiles/",
+        "hdfsAddress": "hdfs://lthdp001.atradiusnet.com:8020/",
+        "outdir": "SqoopFiles"
+    },
+
+    "Tables": [
+	"DD_CAUSES_OF_LOSS",
+	"DD_CLAIM_STATUSES",
+	"DD_COLLECTION_STATUSES ",
+	"DD_COUNTRIES",
+	"DD_DATES",
+	"DD_PAYEES",
+	"DD_PAYMENT_TYPES",
+	"DD_POLICIES",
+	"DD_RECEIPT_TYPES",
+	"DD_REINSURANCE_INDICATORS",
+	"FC_CL_CASES",
+	"FC_CL_CASES_FIN_YEARS",
+	"FT_CL_PAYMENTS",
+	"FT_CL_RECEIPTS",
+	"TBUP_STEP_3"	
+     ]
+}
+

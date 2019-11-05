@@ -1,0 +1,25 @@
+{
+    "version": "0.0.0",
+    "Configs": {
+        "dbServerAddress": "jdbc:mysql://ldwat002.atradiusnet.com", 
+        "dbServerAdd": "ldwat002.atradiusnet.com",
+        "dbServerPort": "3306",
+        "dbName": "risknet",
+        "dbUser": "ReadOnly",
+        "dbPassword": "Only!R3ad",
+        "dbPasswordAlias": "watson.password",
+        "dbSecurityProviderPath": "jceks://hdfs/watson.password.jceks",
+        "targetDirectory": "/DATA/NATIVE_ZONE/RISKNET",
+        "subDBName": "risknet",
+	"targetDBName": "RISKNET",
+        "avscDir": "/user/hdfs/avscSchemaFiles/",
+        "hdfsAddress": "hdfs://lthdp001.atradiusnet.com:8020/",
+        "outdir": "SqoopFiles"
+    },
+
+    "Tables": [
+	"UK_Buyer_TPE_Data",
+	"django_session"
+     ]
+}
+

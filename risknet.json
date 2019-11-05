@@ -1,0 +1,51 @@
+{
+    "version": "0.0.0",
+    "Configs": {
+        "dbServerAddress": "jdbc:mysql://ldwat002.atradiusnet.com", 
+        "dbServerAdd": "ldwat002.atradiusnet.com",
+        "dbServerPort": "3306",
+        "dbName": "risknet",
+        "dbUser": "ReadOnly",
+        "dbPassword": "Only!R3ad",
+        "dbPasswordAlias": "watson.password",
+        "dbSecurityProviderPath": "jceks://hdfs/watson.password.jceks",
+        "targetDirectory": "/DATA/NATIVE_ZONE/RISKNET",
+        "subDBName": "risknet",
+	"targetDBName": "RISKNET",
+        "avscDir": "/user/hdfs/avscSchemaFiles/",
+        "hdfsAddress": "hdfs://lthdp001.atradiusnet.com:8020/",
+        "outdir": "SqoopFiles"
+    },
+
+    "Tables": [	
+	"UK_Buyer_TPE_Data",    
+	"auth_group",           
+	"auth_group_permissions", 
+	"auth_permission",      
+	"auth_user",            
+	"auth_user_groups",
+	"auth_user_user_permissions",
+	"company_scores",       
+	"console_annotation",   
+	"console_annotationcategory",
+	"console_article",      
+	"console_company",      
+	"console_companywebsite",
+	"console_edgarindex",   
+	"console_emailalert",   
+	"console_feedbackdata", 
+	"console_filing",       
+	"console_filingpage",   
+	"console_log",          
+	"console_underwriter",  
+	"django_admin_log",     
+	"django_celery_results_taskresult", 
+	"django_content_type",  
+	"django_migrations",    
+	"django_session",       
+	"django_site",          
+	"duns_fcodes_map",      
+	"expressions_to_avoid"        
+    ]
+}
+

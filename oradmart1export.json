@@ -1,0 +1,32 @@
+{
+    "version": "0.0.0",
+    "Configs": {
+        "dbServerAddress": "jdbc:oracle:thin:@10.224.38.5",
+        "dbServerAdd": "10.224.38.5",
+        "dbServerPort": "1521",
+        "dbName": "csl1db",
+        "dbUser": "orabup1",
+        "dbPassword": "Zeeshan",
+        "dbPasswordAlias": "oracle.orabup0.alias",
+        "dbSecurityProviderPath": "jceks://hdfs/orabup0.password.jceks",
+        "targetDirectory": "/data/transit_zone/ORADMART1",
+        "subDBName": "ORADMART1",
+	"targetDBName": "ORADMART1",
+        "avscDir": "/user/hdfs/avscSchemaFiles/",
+        "hdfsAddress": "hdfs://lthdp001.atradiusnet.com:8020/",
+        "outdir": "SqoopFiles"
+    },
+
+    "Tables": [   
+        "DD_PAYEES",
+        "DD_PAYMENT_TYPES",
+        "DD_POLICIES",
+        "DD_RECEIPT_TYPES",
+        "DD_REINSURANCE_INDICATORS",
+        "FC_CL_CASES",
+        "FC_CL_CASES_FIN_YEARS",
+        "FT_CL_PAYMENTS",
+        "FT_CL_RECEIPTS" 
+    ]
+}
+
